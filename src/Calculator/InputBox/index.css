@@ -1,0 +1,44 @@
+.input-container {
+  position: relative;
+  margin: 8px;
+  width: 100%;
+}
+
+input {
+  height: 48px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 16px;
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+input,
+label .text {
+  font-size: 16px;
+}
+
+input:focus + label .text,
+  /* for making the label stay at top when there is any text written */
+  :not(input[value=""]) + label .text {
+  font-size: 12px;
+  transform: translate(0, -160%);
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.label .text {
+  transition: all 0.15s ease-out;
+}

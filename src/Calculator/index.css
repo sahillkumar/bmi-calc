@@ -1,0 +1,58 @@
+.calculator {
+  height: 100%;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.formWrapper {
+  border: 1px solid grey;
+  width: 50%;
+  margin: auto;
+  padding: 2%;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 4%;
+}
+
+.heightWrapper,
+.weightWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.formLabel {
+  margin-right: 12px;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  width: 83%;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-left: 15%;
+}
+
+.btnWrapper button {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 50%;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.clearBtn {
+  width: 100px;
+  background-color: #ddd;
+}
+
+.submitBtn {
+  color: white;
+  background-color: rgb(7, 151, 241);
+}
