@@ -30,7 +30,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
-      <h1 className="header">Calculate Your BMI</h1>
+      <div className="header">Calculate Your BMI</div>
       <div className="formWrapper">
         <form>
           <div className="weightWrapper">

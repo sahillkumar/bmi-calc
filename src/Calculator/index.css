@@ -1,15 +1,16 @@
 .calculator {
   height: 100%;
-  padding: 4%;
+  width: 60%;
   box-sizing: border-box;
 }
 
 .formWrapper {
-  border: 1px solid grey;
-  width: 50%;
   margin: auto;
-  padding: 2%;
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  height: 90%;
 }
 
 form {
@@ -40,19 +41,24 @@ form {
 
 .btnWrapper button {
   outline: none;
-  border: none;
   height: 40px;
   width: 50%;
   cursor: pointer;
   margin: 4px;
+  color: white;
 }
 
 .clearBtn {
   width: 100px;
-  background-color: #ddd;
+  background-color: transparent;
+  border: 1px solid white;
 }
 
 .submitBtn {
-  color: white;
+  border: none;
   background-color: rgb(7, 151, 241);
+}
+
+.header {
+  text-align: center;
 }

@@ -5,7 +5,9 @@ import "./index.css";
 const BmiTable = () => {
   return (
     <div className="bmiTable">
-      <img src={bmiImage} alt="bmiTable" />
+      <div className="imgWrapper">
+        <img src={bmiImage} alt="bmiTable" />
+      </div>
     </div>
   );
 };
