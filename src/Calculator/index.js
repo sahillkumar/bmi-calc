@@ -19,7 +19,8 @@ const Calculator = () => {
     setBmi(result);
   };
 
-  const clearForm = () => {
+  const clearForm = (e) => {
+    e.preventDefault();
     setBmi("");
     setFormValues({
       inches: "",
@@ -30,8 +31,8 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
-      <div className="header">Calculate Your BMI</div>
       <div className="formWrapper">
+        <div className="header">Calculate Your BMI</div>
         <form>
           <div className="weightWrapper">
             <strong className="formLabel">Weight</strong>{" "}
@@ -65,7 +66,9 @@ const Calculator = () => {
               Calculate BMI
             </button>
           </div>
-          {bmi && <div className="result">Your BMI is : {bmi}</div>}
+          {bmi && (
+            <div className="result">Your BMI is : {Number(bmi).toFixed(3)}</div>
+          )}
         </form>
       </div>
     </div>
