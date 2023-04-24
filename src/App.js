@@ -1,5 +1,4 @@
 import "./App.css";
-import BmiTable from "./BmiTable";
 import Calculator from "./Calculator";
 
 function App() {
