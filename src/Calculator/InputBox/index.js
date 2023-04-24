@@ -12,7 +12,7 @@ const InputBox = ({ placeholder, value, setValue, id }) => {
   return (
     <div className="input-container">
       <input
-        type="text"
+        type="number"
         id="inputBox"
         name="inputBox"
         value={value}
