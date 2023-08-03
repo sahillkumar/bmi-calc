@@ -8,12 +8,23 @@ const Calculator = () => {
     ft: "",
     inches: "",
   });
+  const [bmi, setBmi] = useState(null);
 
-  const [bmi, setBmi] = useState("");
+  const showAlert = (key) => {
+    alert(`${key} is required from BMI calculation`);
+  };
 
   const calculateBmi = (e) => {
     e.preventDefault();
     const { inches, kg, ft } = formValues;
+    if (!kg) {
+      showAlert("weight");
+      return;
+    }
+    if (!ft) {
+      showAlert("height");
+      return;
+    }
     const heighInMeters = ft * 0.3048 + inches * 0.0254;
     const result = kg / Math.pow(heighInMeters, 2);
     setBmi(result);
@@ -58,6 +69,9 @@ const Calculator = () => {
               id="inches"
             />
           </div>
+          {bmi && (
+            <div className="result">Your BMI is : {Number(bmi).toFixed(3)}</div>
+          )}
           <div className="btnWrapper">
             <button type="submit" className="clearBtn" onClick={clearForm}>
               Reset
@@ -66,9 +80,6 @@ const Calculator = () => {
               Calculate BMI
             </button>
           </div>
-          {bmi && (
-            <div className="result">Your BMI is : {Number(bmi).toFixed(3)}</div>
-          )}
         </form>
       </div>
     </div>
