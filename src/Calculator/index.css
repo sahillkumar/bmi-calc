@@ -65,3 +65,10 @@ form {
   margin-bottom: 24px;
   font-family: "Kanit", sans-serif;
 }
+
+.result {
+  text-align: center;
+  background-color: white;
+  color: #5ccfa6;
+  font-weight: bold;
+}
