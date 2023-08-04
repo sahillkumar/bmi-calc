@@ -31,17 +31,17 @@ label .text {
 }
 
 input:focus + label .text,
-  /* for making the label stay at top when there is any text written */
+/* for making the label stay at top when there is any text written */
   :not(input[value=""]) + label .text {
   font-size: 12px;
   transform: translate(0, -160%);
   padding-left: 4px;
   padding-right: 4px;
-  background: hsl(164, 51%, 59%);
+  background: #5ccfa6;
 }
 
 input[type="number"] {
-  -moz-appearance: "textfield";
+  -moz-appearance: textfield;
 }
 
 .label .text {
@@ -52,5 +52,4 @@ input[type="number"] {
   padding: 8px;
   margin-top: 32px;
   font-size: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.1);
 }
